@@ -1,0 +1,9 @@
+D:\Project\ImageCompress\ImageCompress\bin\Debug\ImageCompress.exe
+D:\Project\ImageCompress\ImageCompress\bin\Debug\ImageCompress.pdb
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.csproj.AssemblyReference.cache
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.Form1.resources
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.Properties.Resources.resources
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.csproj.GenerateResource.cache
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.csproj.CoreCompileInputs.cache
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.exe
+D:\Project\ImageCompress\ImageCompress\obj\Debug\ImageCompress.pdb
