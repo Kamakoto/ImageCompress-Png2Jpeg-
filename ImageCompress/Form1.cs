@@ -28,13 +28,24 @@ namespace ImageCompress
                 int summary = 0;
                 foreach (var file in files)
                 {
-                    compressImage(file,quality).Save(Application.StartupPath + "/" + Path.GetFileNameWithoutExtension(file) + ".jpg", ImageFormat.Jpeg);
-                    summary++;
-                    if(checkBox1.Checked)
+                    try
                     {
-                        File.Delete(file);
+                        var A = compressImage(file, quality);
+                        A.Save(Application.StartupPath + "/" + Path.GetFileNameWithoutExtension(file) + ".jpg", ImageFormat.Jpeg);
+                        summary++;
+                        if (checkBox1.Checked)
+                        {
+                            File.Delete(file);
+                        }
+                        label1.Text = $"{summary}/{files.Length}";
+                        A.Dispose();
+                        GC.Collect();
                     }
-                    label1.Text = $"{summary}/{files.Length}";
+                    catch
+                    {
+                        // MEMORY OUT : PICTURE FILE IS Corrupted
+                    }
+
                 }
             }
             else
@@ -72,6 +83,10 @@ namespace ImageCompress
                     g.DrawImage(newImage, new Rectangle(System.Drawing.Point.Empty, newImage.Size), 0, 0,
                       newImage.Width, newImage.Height, GraphicsUnit.Pixel, imageAttributes);
                 }
+                memStream.Dispose();
+                image.Dispose();
+                memImage.Dispose();
+                GC.Collect();
                 return newImage;
             }
         }
